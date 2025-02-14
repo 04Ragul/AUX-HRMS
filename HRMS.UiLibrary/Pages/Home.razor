@@ -1,0 +1,30 @@
+﻿@page "/"
+
+<div>
+    <GridRow>
+        <GridCol Span="24">col-24</GridCol>
+    </GridRow>
+    <GridRow>
+        <GridCol Span="12">col-12</GridCol>
+        <GridCol Span="12">col-12</GridCol>
+    </GridRow>
+    <GridRow>
+        <GridCol Span="8">col-8</GridCol>
+        <GridCol Span="8">col-8</GridCol>
+        <GridCol Span="8">col-8</GridCol>
+    </GridRow>
+    <GridRow>
+        <GridCol Span="6">col-6</GridCol>
+        <GridCol Span="6">col-6</GridCol>
+        <GridCol Span="6">col-6</GridCol>
+        <GridCol Span="6">col-6</GridCol>
+    </GridRow>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await _message.Success("This is a prompt message for success, and it will disappear in 10 seconds", 10);
+    }
+}

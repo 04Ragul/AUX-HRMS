@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>        
+	<PackageReference Include="MediatR" Version="12.4.0" />    
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HRMS.Domain\HRMS.Domain.csproj" />
+    <ProjectReference Include="..\HRMS.Shared.Utilities\HRMS.Shared.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Masters\Departments\Queries\Export\" />
+    <Folder Include="Mappings\Organisations\" />
+  </ItemGroup>
+
+</Project>
